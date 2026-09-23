@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+.site-header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+
+    background: rgba(100, 110, 125, 0.55);
+
+    z-index: 1000;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 38px;
+    height: 38px;
+
+    border: 2px solid #ff00ff;
+    border-left-color: transparent;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fb00ff;
+
+    font-family: Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 500;
+
+    text-decoration: none;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+
+    gap: 32px;
+}
+
+.navigation a {
+    position: relative;
+
+    color: rgba(255, 255, 255, 0.35);
+
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+
+    transition: color 0.3s ease;
+}
+
+
+/* ENLACE ACTIVO */
+
+.navigation a.active {
+    color: #e600ff;
+}
+
+
+/* HOVER */
+
+.navigation a:hover {
+    color: #e600ff;
+}
+/* Estilos Base / Escritorio */
+.site-header {
+  width: 100%;
+  background-color:  #f39dd2;
+  padding: 1rem 0;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.navigation {
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover,
+.navigation a.active {
+  color: #d40094;
+}
+
+/* Ocultar el botón hamburguesa en pantallas grandes */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* --- VISTA MOBILE (Pantallas de 768px o menos) --- */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+    z-index: 100;
+  }
+
+  /* Animación del icono a una 'X' al abrir */
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  /* Transformación del menú desplegable */
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #1a1a1a;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    transition: right 0.4s ease-in-out;
+    z-index: 99;
+  }
+
+  .navigation.active {
+    right: 0;
+  }
+}
+/*aqui empieza el body */
+.hero-wrapper {
+  background-color: #ffd1dc; /* Color crema de fondo */
+  color: #0c0c0c; /* Color rosado del texto */
+  font-family: 'Playfair Display', serif, sans-serif;
+}
+
+.hero-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-text {
+  text-align: center;
+  font-size: clamp(4rem, 12vw, 11rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: 2px;
+  user-select: none;
+}
+.hero-text h6 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  @media (max-width: 768px) {
+  .hero-text {
+    text-align: center;
+  }
+}
+}
+
+/* Contenedor ovalado de la imagen */
+.image-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 260px;
+  height: 160px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Indicador de scroll */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  opacity: 0.6;
+}
+
+/* Sección de relleno para probar el scroll */
+.content-section {
+  height: 150vh;
+  background-color:#e4a89e;
+  color: #e4a89e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================== */
+/* ADAPTACIÓN PARA CELULARES (Pantallas <= 768px) */
+/* ========================================== */
+@media (max-width: 768px) {
+  /* Hacemos la imagen un poco más compacta para que no tape todo en vertical */
+  .image-wrapper {
+    width: 180px;
+    height: 110px;
+  }
+  
+  /* Reducimos ligeramente los márgenes o espaciados si fuera necesario */
+  .scroll-indicator {
+    bottom: 20px;
+    font-size: 0.65rem;
+  }
+}
+/*aqui empiesa el sobre mi*/
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #ffd1dc;
+
+}
+
+/* Título principal */
+h1 {
+  background-color: #ffd1dc; /* Rosa pastel de fondo */
+  color: #7b5263;            /* Color pastel más oscuro para que resalte la letra */
+  text-align: center;         /* Centrado horizontal */
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+/* Contenedor principal que une texto e imagen bajo el mismo fondo */
+.contenido {
+  background-color: #ffd1dc; /* Mismo fondo rosa pastel */
+  display: flex;             /* Coloca los elementos uno al lado del otro */
+  align-items: center;        /* Alinea verticalmente al centro */
+  justify-content: space-between;
+  gap: 20px;                 /* Espacio entre el texto y la imagen */
+  padding: 25px;
+  border-radius: 12px;
+}
+
+/* Texto a la izquierda */
+.contenido p {
+  flex: 1;                   /* Ocupa el espacio disponible de la izquierda */
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #6b4353;            /* Color pastel coordinado con el título */
+  text-align: left;
+}
+
+/* Imagen a la derecha */
+.contenido img {
+  width: 100%;             /* Ocupa todo el ancho disponible del contenedor */
+  max-width: 500px;        /* No pasa de 500px en pantallas grandes */
+           /* Mantiene la proporción original de la imagen */
+  aspect-ratio: 1 / 1;     /* Fuerza a que sea cuadrada (opcional, simula los 500x500) */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+/* aqui empieza el footer*/
+
+.site-footer {
+  background-color: #1a1a1a; /* Color oscuro elegante, puedes cambiarlo */
+  color: #ffffff;
+  padding: 40px 20px;
+  text-align: center;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Espacio entre el texto y los iconos */
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: #a0a0a0;
+  margin: 0;
+}
+
+/* Contenedor de los iconos */
+.social-icons {
+  display: flex;
+  gap: 20px; /* Separación entre cada icono */
+}
+
+/* Estilo de cada enlace/icono */
+.social-icons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-radius: 50%; /* Hace que los iconos tengan fondo circular */
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima */
+.social-icons a:hover {
+  background-color: #ffffff;
+  color: #1a1a1a;
+  transform: translateY(-3px); /* Pequeño salto hacia arriba */
+}
+
+/* Ajustes especiales para vista de celular */
+@media (max-width: 768px) {
+  .site-footer {
+    padding: 30px 15px;
+  }
+  
+  .social-icons {
+    gap: 15px; /* Un poco más juntos en pantallas chicas */
+  }
+
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
