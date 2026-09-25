@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Footer from './Footer';
+
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -33,8 +35,8 @@ function Navbar() {
           <a href="#inicio" className="active" onClick={closeMenu}>
             INICIO
           </a>
-          <a href="#competencias" onClick={closeMenu}>
             SOBRE Mi
+          <a href="#competencias" onClick={() => {closeMenu; document.getElementById("site-footer").scrollIntoView()}}>
           </a>
           <a href="#experiencia" onClick={closeMenu}>
             EXPERIENCIA

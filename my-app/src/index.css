@@ -325,55 +325,58 @@ h1 {
 /* aqui empieza el footer*/
 
 .site-footer {
-  background-color: #1a1a1a; /* Color oscuro elegante, puedes cambiarlo */
-  color: #ffffff;
-  padding: 40px 20px;
-  text-align: center;
   width: 100%;
+  padding: 40px 20px;
+  background-color: #ffd1dc;
+  color: rgb(255, 255, 255);
+  box-sizing: border-box;
 }
 
 .footer-content {
   max-width: 1200px;
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; /* Espacio entre el texto y los iconos */
+  gap: 20px;
 }
 
 .footer-content p {
-  font-size: 14px;
-  color: #a0a0a0;
   margin: 0;
+  color: #000000;
+  font-size: 14px;
 }
 
-/* Contenedor de los iconos */
 .social-icons {
   display: flex;
-  gap: 20px; /* Separación entre cada icono */
+  gap: 20px;
 }
 
-/* Estilo de cada enlace/icono */
 .social-icons a {
+  width: 45px;
+  height: 45px;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+
+  border-radius: 50%;
+
   background-color: rgba(255, 255, 255, 0.1);
-  color: #ffffff;
-  border-radius: 50%; /* Hace que los iconos tengan fondo circular */
-  font-size: 18px;
-  transition: all 0.3s ease;
+  color: rgb(0, 0, 0);
+
+  font-size: 20px;
+  text-decoration: none;
+
+  transition: 0.3s ease;
 }
 
-/* Efecto al pasar el mouse por encima */
 .social-icons a:hover {
-  background-color: #ffffff;
-  color: #1a1a1a;
-  transform: translateY(-3px); /* Pequeño salto hacia arriba */
+  background-color: rgb(0, 0, 0);
+  color: #030303;
+  transform: translateY(-3px);
 }
-
 /* Ajustes especiales para vista de celular */
 @media (max-width: 768px) {
   .site-footer {
