@@ -32,22 +32,21 @@ function Navbar() {
 
         {/* Menú de Navegación */}
         <nav className={`navigation ${isOpen ? 'active' : ''}`}>
-          <a href="#inicio" className="active" onClick={closeMenu}>
+          <a href="#inicio"
+             onClick={closeMenu}
+          >  
             INICIO
-          </a>
-            SOBRE Mi
-          <a href="#competencias" onClick={() => {closeMenu; document.getElementById("site-footer").scrollIntoView()}}>
-          </a>
-          <a href="#experiencia" onClick={closeMenu}>
-            EXPERIENCIA
-          </a>
-          <a href="#portafolio" onClick={closeMenu}>
-            PORTAFOLIO
-          </a>
-          <a href="#contacto" onClick={closeMenu}>
+         </a>
+         <a href="#sobre-mi"
+             onClick={closeMenu}
+         >
+            SOBRE MÍ
+         </a>
+         <a href="#site-footer" onClick={closeMenu}>
             CONTACTO
-          </a>
-        </nav>
+         </a>
+
+       </nav>
       </div>
     </header>
   );
